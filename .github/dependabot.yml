@@ -1,9 +1,26 @@
 version: 2
+
 updates:
-  # Keep package.json (& lockfiles) up to date as soon as
-  # new versions are published to the npm registry
-  - package-ecosystem: "npm"
+  - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: "daily"
-    versioning-strategy: "increase"
+      interval: weekly
+      day: sunday
+      time: "09:00"
+      timezone: Europe/Paris
+    versioning-strategy: "increase-if-necessary"
+
+    # Behaviour of pull requests
+    open-pull-requests-limit: 5
+    pull-request-branch-name:
+      separator: "-"
+    commit-message:
+      prefix: build
+      include: scope
+
+    labels:
+      - dependencies
+
+    # Control which dependencies are updated
+    ignore:
+      - dependency-name: "ember-cli"
