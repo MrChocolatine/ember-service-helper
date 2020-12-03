@@ -4,6 +4,9 @@
 
 Simple template helper to inject services into templates.
 
+Credits go to [@buschtoens](https://github.com/buschtoens) for its initial implementation:  
+https://github.com/buschtoens/ember-service-helper
+
 
 ## Installation
 
