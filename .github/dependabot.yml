@@ -1,14 +1,14 @@
+# https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
+
 version: 2
 
 updates:
   - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: weekly
-      day: sunday
-      time: "09:00"
-      timezone: Europe/Paris
-    versioning-strategy: "increase-if-necessary"
+      interval: daily
+      time: "05:00"
+      timezone: Europe/London
 
     # Behaviour of pull requests
     open-pull-requests-limit: 5
@@ -18,6 +18,11 @@ updates:
       prefix: build
       include: scope
 
+    # Metadata of pull requests
+    assignees:
+      - MrChocolatine
+    reviewers:
+      - MrChocolatine
     labels:
       - dependencies
 
