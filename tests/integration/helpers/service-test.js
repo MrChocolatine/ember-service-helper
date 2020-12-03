@@ -20,7 +20,7 @@ module('Integration | Helpers | Service', function (hooks) {
   hooks.beforeEach(function () {
     this.owner.register(
       'service:some-service',
-      class SomeService extends Service {
+      class extends Service {
         init() {
           super.init();
 
@@ -56,4 +56,15 @@ module('Integration | Helpers | Service', function (hooks) {
 
     await render(hbs`{{service "not-a-service"}}`);
   });
+
+  test('it can directly get a property from a Service', async function (assert) {
+    assert.expect(2);
+
+    await render(hbs`{{service "some-service" "donald"}}`);
+    assert.dom().hasNoText();
+
+    this.owner.lookup('service:some-service').set('donald', 'duck');
+    await settled();
+    assert.dom().hasText('duck');
+  })
 });

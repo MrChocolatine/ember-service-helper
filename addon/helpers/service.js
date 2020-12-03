@@ -3,10 +3,14 @@ import Helper from '@ember/component/helper';
 import { assert } from '@ember/debug';
 
 export default class ServiceHelper extends Helper {
-  compute([serviceName]) {
-    const service = getOwner(this).lookup(`service:${serviceName}`);
-    assert(`The service '${serviceName}' does not exist`, service);
 
-    return service;
+  compute([ name, property ]) {
+    const service = getOwner(this).lookup(`service:${name}`);
+    assert(`The service '${name}' does not exist`, service);
+
+    return typeof property === 'string'
+      ? service.get( property )
+      : service
   }
+
 }
