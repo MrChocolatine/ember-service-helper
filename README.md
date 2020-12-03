@@ -11,17 +11,33 @@ Simple template helper to inject services into templates.
 ember install MrChocolatine/ember-service-helper
 ```
 
+
 ## Usage
+
+### Get a Service object
 
 Example using [`ember-responsive`](https://github.com/freshbooks/ember-responsive).
 
 ```hbs
-{{#if (get (service "breakpoints") "isDesktop")}}
-  Desktop breakpoint
-{{else}}
-  Mobile breakpoint
-{{/if}}
+{{#with (service "some-service") as |serviceX|}}
+  <div>
+    {{serviceX.propA}}
+  </div>
+  <div>
+    {{serviceX.propB}}
+  </div>
+{{/with}}
 ```
+
+
+### Get directly a property from a Service
+
+```hbs
+<div>
+  {{service "some-service" "propA"}}
+</div>
+```
+
 
 ## Related
 
