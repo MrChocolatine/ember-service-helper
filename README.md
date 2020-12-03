@@ -1,13 +1,9 @@
-# ember-service-helper
+# `ember-service-helper`
 
-[![CI](https://github.com/buschtoens/ember-service-helper/workflows/CI/badge.svg)](https://github.com/buschtoens/ember-service-helper/actions)
-[![npm version](https://badge.fury.io/js/ember-service-helper.svg)](http://badge.fury.io/js/ember-service-helper)
-[![Download Total](https://img.shields.io/npm/dt/ember-service-helper.svg)](http://badge.fury.io/js/ember-service-helper)
-[![Ember Observer Score](https://emberobserver.com/badges/ember-service-helper.svg)](https://emberobserver.com/addons/ember-service-helper)
-[![dependencies](https://img.shields.io/david/buschtoens/ember-service-helper.svg)](https://david-dm.org/buschtoens/ember-service-helper)
-[![devDependencies](https://img.shields.io/david/dev/buschtoens/ember-service-helper.svg)](https://david-dm.org/buschtoens/ember-service-helper)
+![CodeQL](https://github.com/MrChocolatine/ember-service-helper/workflows/CodeQL/badge.svg)
 
 Simple template helper to inject services into templates.
+
 
 ## Installation
 
