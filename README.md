@@ -7,8 +7,8 @@ Simple template helper to inject services into templates.
 
 ## Installation
 
-```
-ember install ember-service-helper
+```text
+ember install MrChocolatine/ember-service-helper
 ```
 
 ## Usage
