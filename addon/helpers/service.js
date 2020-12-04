@@ -1,5 +1,5 @@
-import { getOwner } from '@ember/application';
 import Helper from '@ember/component/helper';
+import { getOwner } from '@ember/application';
 import { assert } from '@ember/debug';
 
 export default class ServiceHelper extends Helper {
